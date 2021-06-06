@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -8,7 +9,11 @@
     
     <h1 class="head">Happy Birthday</h1>
 <style> 
-
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 .head {
 text-align: center;
 color: black;
@@ -18,7 +23,7 @@ margin-top: 20px;
 }
 
 body {
- background-image: url("https://raw.githubusercontent.com/shlesha19/birthday-card-by-shlesha/master/balloon-5966383_1280.png");
+ /*background-image: url("https://raw.githubusercontent.com/shlesha19/birthday-card-by-shlesha/master/balloon-5966383_1280.png");*/
 }
 
 .main {
@@ -27,14 +32,44 @@ body {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+        html {
+          font-size: 35%;
+        }
+      }
+
 
 </style>
 </head>
 <body>
 <div class="main">
-<div id="card"></div>
+  <div class="main_header"></div>
+<div id="card">
+  <img src="https://raw.githubusercontent.com/shlesha19/birthday-wisher-by-shlesha/master/WhatsApp%20Image%202021-06-06%20at%204.21.35%20PM.jpeg" height="490vw" width="320vw">
+</div>
 </div>
 
+<script src="./confetti.js"></script>
+    <script>
+      //   confetti.stop();
 
-</body>
+      const startit = () => {
+        setTimeout(function () {
+          console.log("start");
+          confetti.start();
+        }, 1000);
+      };
+
+      const stopit = () => {
+        setTimeout(function () {
+          console.log("stop");
+          confetti.stop();
+        }, 6000);
+      };
+
+      startit();
+      stopit();
+    </script>
+    <script src="node_modules/confetti-js/dist/index.min.js"></script>
+  </body>
 </html>
