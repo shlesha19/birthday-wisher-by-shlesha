@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="boder-style:solid;">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--<script src="script.js"></script>-->
@@ -8,13 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     
-    <h1 class="head">Happy Birthday</h1>
+   <!-- <h1 class="head" style="boder: 1px solid;">Happy Birthday</h1>-->
 <style> 
 * {
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
+
+
 .head {
 text-align: center;
 color: black;
@@ -24,13 +26,20 @@ margin-top: 20px;
 }
 
 body {
- /*background-image: url("https://raw.githubusercontent.com/shlesha19/birthday-card-by-shlesha/master/balloon-5966383_1280.png");*/
+ background-image: url("https://raw.githubusercontent.com/shlesha19/birthday-card-by-shlesha/master/balloon-5966383_1280.png");
+  
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container {
+  display:flex;
+  /*position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);*/
+  justify-content:center;
+  align-items:center;
+  margin-top:45px;
+  margin-bottom:25px;
 }
 
 @media (max-width: 768px) {
@@ -39,21 +48,91 @@ body {
         }
       }
 
+.book {
+  position:relative;
+  width:340px;
+  height:440px;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+}
+
+.book:hover {
+  z-index:1;
+  transform: perspective(2000px);
+  box-shadow:inset 10px 0 50px rgba(0,0,0,0.5);
+  background-color:aqua;
+}
+
+.book .cover {
+  position: relative;
+  width:100%;
+  height:100%;
+  box-sizing:border-box;
+  transform-origin:left;
+  z-index:1;
+  transition:1s;
+}
+
+.book:hover .cover{
+  transform: rotateY(-135deg);
+}
+
+.book .cover img {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.book .details {
+  position:absolute;
+  top:0;
+  left:0;
+  box-sizing:border-box;
+  padding:20px;
+ 
+}
+
+.details {
+  padding:10px;
+}
+
+.details img{
+  margin-top:17%;
+}
+
+
 
 </style>
 </head>
 <body>
-<div class="main">
-  <div class="main_header"></div>
-<div id="card">
+<h1 class="head" style="boder: 1px solid;">Happy Birthday</h1>
+<div class="container">
+  
+<div class="book">
+  <div class="cover">
   <img src="https://raw.githubusercontent.com/shlesha19/birthday-wisher-by-shlesha/master/WhatsApp%20Image%202021-06-06%20at%204.21.35%20PM.jpeg" height="490vw" width="320vw">
+  </div>
+  <div class="details">
+    <h2 style="font-size:35px;
+text-align:center; font-family: 'Great Vibes', cursive;">Special Day</h2>
+    <p style="font-size:25px; font-family: 'Great Vibes', cursive;">Happy birthday!! <br>
+    and many many happy returns of the day!!<br>
+    Wishing you good luck and a happy and enjoyable life ahead..
+    </p>
+    <img src="https://raw.githubusercontent.com/shlesha19/birthday-wisher-by-shlesha/master/cupcakes-380178_1280.jpg" width="230px" height="150px">
+  </div>
 </div>
 </div>
+
 
 
 <script src="https://www.wpromotions.eu/confetti.min.js"></script>
 <script>confetti.start()</script>
-<script>setTimeout(function(){confetti.stop();},3000)</script>
+<script>setTimeout(function(){confetti.stop();},20000)</script>
+
  
   </body>
 </html>
