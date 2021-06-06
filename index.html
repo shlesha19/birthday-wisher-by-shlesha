@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -49,27 +50,10 @@ body {
 </div>
 </div>
 
-<script src="./confetti.js"></script>
-    <script>
-      //   confetti.stop();
 
-      const startit = () => {
-        setTimeout(function () {
-          console.log("start");
-          confetti.start();
-        }, 1000);
-      };
-
-      const stopit = () => {
-        setTimeout(function () {
-          console.log("stop");
-          confetti.stop();
-        }, 6000);
-      };
-
-      startit();
-      stopit();
-    </script>
-    <script src="node_modules/confetti-js/dist/index.min.js"></script>
+<script src="https://www.wpromotions.eu/confetti.min.js"></script>
+<script>confetti.start()</script>
+<script>setTimeout(function(){confetti.stop();},3000)</script>
+ 
   </body>
 </html>
